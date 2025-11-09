@@ -6,7 +6,6 @@ import { fileURLToPath } from 'url'
 
 import config from '@/payload.config'
 import './styles.css'
-
 export default async function HomePage() {
   const headers = await getHeaders()
   const payloadConfig = await config
@@ -19,13 +18,8 @@ export default async function HomePage() {
     <div className="home">
       <div className="content">
         <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
+          <source srcSet="/meylogo.png" />
+          <Image src="/meylogo.png" alt="Logo" width={250} height={100} />
         </picture>
         {!user && <h1>Welcome to your new Meybohm Backend.</h1>}
         {user && <h1>Welcome back, {user.email}</h1>}
